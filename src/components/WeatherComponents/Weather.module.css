@@ -1,0 +1,23 @@
+.WeatherComponent {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #C3E6EC;
+    border: 1px solid #4E8CAB;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .WeatherComponent p {
+    color: #204051;
+    font-size: 16px;
+    margin: 0;
+  }
+  
+  .WeatherComponent span {
+    color: #204051;
+    font-weight: bold;
+  }
+  
