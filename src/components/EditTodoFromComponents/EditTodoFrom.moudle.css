@@ -1,0 +1,29 @@
+.EditTodoForm {
+    margin-bottom: 20px;
+  }
+  
+  .EditTodoForm input {
+    width: calc(100% - 18px);
+    padding: 8px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #4E8CAB;
+  }
+  
+  .EditTodoForm button {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    background-color: #007EA7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .EditTodoForm button:hover {
+    background-color: #005E7D;
+  }
+             
