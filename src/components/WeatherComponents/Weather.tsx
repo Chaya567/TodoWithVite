@@ -4,7 +4,7 @@ import { fetchWeatherData } from '../../Api/weatherApi';
 import { WeatherData } from '../../interfaces/WeatherInterface';
 
 const Weather = () => {
-  const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
+  const [weatherData, setWeatherData] = useState<WeatherData>(null!);
 
   useEffect(() => {
     const fetchData = async () => {

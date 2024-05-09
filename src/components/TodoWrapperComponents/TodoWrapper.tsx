@@ -31,6 +31,7 @@ const TodoWrapper = () => {
     const editTask = (task: string, id: string) => {
         setTodos(todos.map(todo => todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo))
     }
+    
     return (
         <div className={styles.TodoWrapper}>
             <h1>To Do List</h1>

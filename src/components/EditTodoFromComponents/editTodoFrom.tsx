@@ -1,22 +1,10 @@
 import React, { useState } from 'react';
-
-interface EditTodoFormProps {
-    editTodo: (newValue: string, taskId: string) => void;
-    task: {
-        id: string;
-        task: string;
-        completed: boolean;
-    };
-}
+import { EditTodoFormProps } from '../../interfaces/EditTodoFormProps';
 
 export const EditTodoForm = ({ editTodo, task }: EditTodoFormProps) => {
     const [value, setValue] = useState("");
 
     const handleSubmit = (e: React.FormEvent) => {   
-
-
-
-
 
         e.preventDefault();
         editTodo(value, task.id);
