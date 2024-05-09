@@ -6,7 +6,7 @@ interface TodoFormProps {
     addTodo: (task: string) => void;
 }
 
-export const TodoForm: React.FC<{ addTodo: (value: string) => void }> = ({ addTodo }) => {
+export const TodoForm = ({ addTodo }: TodoFormProps) => {
 
     const [value, setValue] = useState("");
 

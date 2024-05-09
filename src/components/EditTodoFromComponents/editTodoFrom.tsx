@@ -9,10 +9,15 @@ interface EditTodoFormProps {
     };
 }
 
-export const EditTodoForm: React.FC<EditTodoFormProps> = ({ editTodo, task }) => {
+export const EditTodoForm = ({ editTodo, task }: EditTodoFormProps) => {
     const [value, setValue] = useState("");
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = (e: React.FormEvent) => {   
+
+
+
+
+
         e.preventDefault();
         editTodo(value, task.id);
     };
