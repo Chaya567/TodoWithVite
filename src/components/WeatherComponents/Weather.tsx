@@ -1,27 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import styles from './Weather.module.css';
-import axios from 'axios';
-import { apiUrl } from './Weather.settings';
+import { fetchWeatherData } from '../../Api/weatherApi';
+import { WeatherData } from '../../interfaces/WeatherInterface';
 
-interface WeatherData {
-  main: {
-    temp: number;
-  };
-  weather: {
-    description: string;
-  }[];
-}
-
-const Weather: React.FC = () => {
+const Weather = () => {
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<WeatherData>(apiUrl);
-        setWeatherData(response.data);
+        const data = await fetchWeatherData();
+        setWeatherData(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error('Error setting weather data:', error);
       }
     };
 

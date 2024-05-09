@@ -2,7 +2,7 @@ import React from 'react';
 import TodoWrapper from './components/TodoWrapperComponents/TodoWrapper';
 import Weather from './components/WeatherComponents/Weather';
 
-const App: React.FC = () => (
+const App = () => (
   <div className="App">
     <TodoWrapper />
     <Weather/>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { TodoForm } from '../TodoFromComponents/TodoFrom';
-import { Todo } from '../TodoComponents/Todt';
+import { Todo } from '../TodoComponents/Todo';
 import { EditTodoForm } from '../EditTodoFromComponents/editTodoFrom';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './TodoWrapper.module.css';
@@ -13,7 +13,7 @@ interface TodoItem {
   isEditing: boolean;
 }
 
-const TodoWrapper: React.FC = () => {
+const TodoWrapper = () => {
     const [todos, setTodos] = useState<TodoItem[]>([]);
 
     const addTodo = (todo: string) => {

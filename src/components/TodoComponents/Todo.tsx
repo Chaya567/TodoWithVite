@@ -16,10 +16,10 @@ interface TodoProps {
     editTodo: (taskId: string) => void;
 }
 
-export const Todo: React.FC<TodoProps> = ({ task, toggleComplete, deleteTodo, editTodo }) => {
+export const Todo = ({ task, toggleComplete, deleteTodo, editTodo }: TodoProps) => {
     return (
         <div className={styles.Todo}>
-    <p onClick={() => toggleComplete(task.id)} className={`${task.completed ? styles.completed : ''}`}>{task.task}</p>
+<p onClick={() => toggleComplete(task.id)} className={task.completed ? styles.completed : ''}>{task.task}</p>
     <div>
         <FontAwesomeIcon icon={faPenToSquare} onClick={() => editTodo(task.id)} />
         <FontAwesomeIcon icon={faTrash} onClick={() => deleteTodo(task.id)} />
